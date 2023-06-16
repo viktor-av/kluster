@@ -43,7 +43,7 @@ REQUIRED = [
             'watchdog>=2.1.6',
             'xarray==0.20.2',
             'zarr==2.10.3',
-            'hstb.drivers @ git+https://github.com/noaa-ocs-hydrography/drivers.git#egg=hstb.drivers',
+            'hstb.drivers @ git+https://github.com/selimnairb/HTSB-drivers.git#egg=hstb.drivers',
             'hstb.shared @ git+https://github.com/noaa-ocs-hydrography/shared.git#egg=hstb.shared',
             'vyperdatum @ git+https://github.com/noaa-ocs-hydrography/vyperdatum.git#egg=vyperdatum',
             'bathygrid @ git+https://github.com/noaa-ocs-hydrography/bathygrid.git#egg=bathygrid'
