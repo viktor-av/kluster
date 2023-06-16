@@ -55,7 +55,7 @@ RUN conda create -n kluster_test python=3.8.12
 SHELL ["conda", "run", "-n", "kluster_test", "/bin/bash", "-c"]
 
 RUN conda install -c conda-forge qgis=3.18.3 vispy=0.9.4 pyside2=5.13.2 gdal=3.3.1 h5py python-geohash
-RUN pip install git+https://github.com/noaa-ocs-hydrography/kluster.git#egg=hstb.kluster
+RUN pip install git+https://github.com/viktor-av/kluster.git#egg=hstb.kluster
 
 # currently unable to run the GUI in Docker
 # RUN python -m HSTB.kluster
