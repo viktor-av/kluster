@@ -266,11 +266,11 @@ def _validate_sequential_read_ping(recs: dict):
                 except AssertionError:
                     raise ValueError(f'sequential_read: ping record {tmprec} must be of the required data type. '
                                      f"Dtype: {recs['ping'][tmprec].dtype}, Required Dtype: {['<U2', '<U3', '<U4', '<U5']}")
-        try:
-            assert all([recs['ping'][pms].dtype == required_ping_dtype[cnt] for cnt, pms in enumerate(required_ping)])
-        except AssertionError:
-            raise ValueError(f'sequential_read: All ping records must be of the required data type. Records: {required_ping}, '
-                             f'Dtype: {[recs["ping"][pms].dtype for pms in required_ping]}, Required Dtype: {required_ping_dtype}')
+#        try:
+#            assert all([recs['ping'][pms].dtype == required_ping_dtype[cnt] for cnt, pms in enumerate(required_ping)])
+#        except AssertionError:
+#            raise ValueError(f'sequential_read: All ping records must be of the required data type. Records: {required_ping}, '
+#                             f'Dtype: {[recs["ping"][pms].dtype for pms in required_ping]}, Required Dtype: {required_ping_dtype}')
         for prec, prectype in zip(optional_ping, optional_ping_dtype):
             if prec in recs['ping']:
                 try:
